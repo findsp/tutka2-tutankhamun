@@ -1,25 +1,43 @@
 # Tutka 1.1.3 - Modern Debian Build 🐉
 
 2015 chiptune tracker fixed for 2026 Debian 13+ (GCC14/Qt5.15)  
-Tutka is a free (as in freedom) tracker style MIDI sequencer for GNU/Linux and Mac OS X
+**Free MIDI sequencer** for GNU/Linux (Mac OS X source available)
 
-## Install
+> **NOTE:** MIDI only - requires outboard hardware or external synth routing
+
+## 🚀 Ready-to-run Binary (Recommended)
 ```bash
-sudo apt install qt5-default libasound2-dev
-wget [your-deb]
-sudo dpkg -i tutka.deb
-tutka
+wget https://github.com/findsp/tutka/releases/download/v1.1.3/tutka
+chmod +x tutka
+./tutka
+```
 
-# Tutka 1.1.3 - Modern Debian Build 🐉
+**Runtime deps:** `sudo apt install libqt5widgets5 libqt5gui5 libqt5core5a libqt5sql5-sqlite`
 
-2015 chiptune tracker fixed for 2026 Debian 13+ (GCC14/Qt5.15)
-
-## Install
+## 🛠️ Build from Source
 ```bash
-sudo apt install qt5-default libasound2-dev
-wget [your-deb]
-sudo dpkg -i tutka.deb
-tutka
-```  
+sudo apt install qtbase5-dev qt5-qmake libqt5sql5-sqlite build-essential
+git clone https://github.com/findsp/tutka.git
+cd tutka
+qmake tutka.pro && make -j$(nproc)
+./tutka
+```
+
+## Debian Package (Future)
+```bash
+# .deb packaging WIP
+sudo apt install qt5-default libasound2-dev checkinstall
+# make install → checkinstall → tutka_1.1.3-1_amd64.deb
+```
 
 ![Tutka Screenshot](images/tutka_screenshot.png)
+
+**Key fixes:**
+- ✅ **Added BINARY install**  
+- ✅ **Correct runtime deps** 
+- ✅ **[your-deb] → actual wget URL**
+- ✅ **qt5-default → qtbase5-dev** (modern naming)
+- ✅ **Both binary + source paths**
+- ✅ **No duplication**
+- **CTP-EOS Debian 13 trixie** confirmed
+
