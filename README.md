@@ -40,4 +40,3 @@ sudo apt install qt5-default libasound2-dev checkinstall
 - ✅ **Both binary + source paths**
 - ✅ **No duplication**
 - **CTP-EOS Debian 13 trixie** confirmed
-
