@@ -1,4 +1,4 @@
-# Tutka 1.1.3 - Modern Debian Build 🐉
+# Tutka 1.1.3 - Modern CTP-EOS/Debian Build 🐉
 
 2015 chiptune tracker fixed for 2026 Debian 13+ (GCC14/Qt5.15)  
 **Free MIDI sequencer** for GNU/Linux (Mac OS X source available)
