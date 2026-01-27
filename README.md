@@ -4,7 +4,7 @@
 **Free MIDI sequencer** for GNU/Linux (Mac OS X source available)
 
 > **NOTE:** MIDI only - requires outboard hardware or external synth routing  
-> **Devices:** Tutka outputs ALSA MIDI only.
+> **Devices:** Tutka outputs ALSA MIDI only.  
 > **Connect:** Route MIDI to a hardware synth, or to a software synth via ALSA/JACK/PipeWire.
 
 ## 🚀 Ready-to-run Binary (Recommended)
