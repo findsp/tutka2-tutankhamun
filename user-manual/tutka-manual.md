@@ -1,4 +1,4 @@
-# Tutka Manual
+# Tutka Manual (FINDSP Version)
 
 # Table of Contents
 
