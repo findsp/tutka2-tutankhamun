@@ -1,13 +1,33 @@
-1.1.3
+# Tutka News
+
+## Tutka 2: Tutankhamun Edition
+
+### 2.0.0 – Alpha 0.1
+-----
+- Fully functional tracker engine modernized for Qt5/6
+- Drawable MIDI/automation lanes added (click/drag points, curves)
+- GTK/Qt compatible color theming and dynamic palette switching
+- Streamlined UI layout: transport, track panels, inspector optimized
+- Modular project structure for easier expansion (core, plugins scaffolding, user manual)
+- `/user-manual` auto-loads on first run; root `README.md` added for GitHub display
+- Build system updated: clean compile, zero deprecated warnings, multi-core support
+- Plugins folder exists for future expansion (currently scaffolding, no audio integration)
+- Status: fully functional tracker with enhanced UI, production-ready for current feature set
+
+---
+
+## Tutka 1
+
+### 1.1.3
 -----
 - Various build fixes
 
-1.1.2
+### 1.1.2
 -----
 - Songs are now saved with the .tutka extension if not otherwise specified
 - Exporting standard MIDI files works correctly now
 
-1.1.1
+### 1.1.1
 -----
 - Set track volume command
 - Set instrument volume command
@@ -17,25 +37,25 @@
 - French translation (from Olivier Humbert)
 - Loading empty notes works correctly now
 
-1.1.0
+### 1.1.0
 -----
 - Instrument specific arpeggio support
 - Tutka now quits after the song has been played when playing a song without the GUI (-p option)
 - Hold values greater than 127 now work as expected
 - MIDI message reception now works as expected
 
-1.0.5
+### 1.0.5
 -----
 - MIDI controller slides are now smooth regardless of the magnitude of the slide
 - Confirmation dialog is now shown before creating a new song if the current song has been modified
 
-1.0.4
+### 1.0.4
 -----
 - Non-MIDI related commands now work even if no note has been played on the channel
 - Setting the tempo and ticks per line using player commands now affect the song properties dialog
 - Tempo is no longer incorrectly sent over MIDI
 
-1.0.3
+### 1.0.3
 -----
 - Song is now considered to be changed when the playing sequence or section contents change
 - Track statuses are now properly reset when loading a new song or notes are stopped
@@ -43,30 +63,30 @@
 - Significant improvements to the tracker widget redrawing performance
 - Support for loading MMD0 and MMD1 songs
 
-1.0.2
+### 1.0.2
 -----
 - Song changed status is now shown in the main window title bar
 - A confirmation dialog is now shown before quitting if the song has been modified
 - Fixes to keyboard event handling when menus are open
 - Long track names overlapping other track names was fixed
 
-1.0.1
+### 1.0.1
 -----
 - Qt4 support was fixed
 - Track name changes are now immediately reflected in the main window
 
-1.0.0
+### 1.0.0
 -----
 - Properly use a monospace font on Mac OS X
 
-0.99.1
+### 0.99.1
 ------
 - RELAX NG schema for the file format
 - Crash fixes
 - UI update fixes
 - High resolution icons both on Linux and Mac OS X
 
-0.99.0
+### 0.99.0
 ------
 - Rewritten in C++ and Qt
 - Support for Mac OS X
@@ -74,17 +94,17 @@
 - Save window positions on exit
 - Various bug fixes
 
-0.12.5
+### 0.12.5
 ------
 - Insert/delete track functionality was implemented
 
-0.12.4
+### 0.12.4
 ------
 - Tracker widget refreshing was improved
 - A bug in copy/paste functionality was fixed
 - A bug that caused a crash on startup in some environments was fixed
 
-0.12.3
+### 0.12.3
 ------
 - The tracker widget now uses Pango for better font rendering
 - Tracker scrollbars were fixed
@@ -94,18 +114,18 @@
 - Relocation and Autopackage support were implemented
 - Preliminary Jack transport support was added
 
-0.12.2
+### 0.12.2
 ------
 - Tutka now uses the ALSA sequencer API for more flexible MIDI device support
 
-0.12.1
+### 0.12.1
 ------
 - MIDI message list and MIDI message receiving were improved
 - Multiple MIDI interface support was improved
 - Online manual was improved
 - Improvements and bugfixes were made to the GUI
 
-0.12.0
+### 0.12.0
 ------
 - Support for multiple MIDI interfaces (requires ALSA)
 - Program change command
@@ -114,12 +134,12 @@
 - GTK+ 2.4 migration (file chooser etc.)
 - Many internal cleanups
 
-0.11.2
+### 0.11.2
 ------
 - All list dialogs were cleaned up
 - Lots of bugfixes
 
-0.11.1
+### 0.11.1
 ------
 - MIDI message loading and saving implemented
 - MIDI message receiving improved
@@ -127,17 +147,17 @@
 - Confirm quit dialog implemented
 - Lots of bugfixes
 
-0.11.0
+### 0.11.0
 ------
 - MMD export
 - MMD import improvements
 - Raw MIDI messages are not limited to SysEx messages anymore
 
-0.10.3
+### 0.10.3
 ------
 - Preferences using GConf
 
-0.10.2
+### 0.10.2
 ------
 - Editor/GUI separation work
 - Timing improvements: nanosleep and RTC modes (512Hz RTC used by default - set
@@ -150,13 +170,13 @@
 - Numerous bugfixes
 - Stop command removed: use E00 or F00 instead
 
-0.10.1
+### 0.10.1
 ------
 - MIDI input implemented
 - Set last command value command implemented
 - MMD custom command conversion implemented
 
-0.10.0
+### 0.10.0
 ------
 - Menu shortcuts work and shortcut keys are displayed in menus
 - Stop command (4) won't hang Tutka anymore
@@ -172,7 +192,7 @@
 - Set hold value command
 - Retrigger command
 
-0.9.0
+### 0.9.0
 -----
 - GUI completely recreated/written in Glade
 - Entry widgets work correctly now
@@ -180,53 +200,53 @@
 - Crashes when deleting blocks and playing sequences were fixed
 - Lots of small fixes and improvements
 
-0.8.2
+### 0.8.2
 -----
 - Cutting, copying and pasting are implemented
 
-0.8.1
+### 0.8.1
 -----
 - SysEX message list window and SysEx send/receive are implemented
 
-0.8.0
+### 0.8.0
 -----
 - Pitch wheel command is implemented
 - Channel pressure command is implemented
 - MIDI controllers are implemented
 - Set row is implemented in command 02
 
-0.7.1
+### 0.7.1
 -----
 - Includes are not installed anymore
 
-0.7.0
+### 0.7.0
 -----
 - A new threaded method for exact timing is now implemented
 
-0.6.0
+### 0.6.0
 -----
 - Track volumes are implemented
 - Track muting is implemented
 
-0.5.2
+### 0.5.2
 -----
 - Playing sequences can be added and deleted
 
-0.5.1
+### 0.5.1
 -----
 - GUI is cleaned up
 
-0.5.0
+### 0.5.0
 -----
 - MMD loading works fine now
 - MMD effect pages are imported
 
-0.4.0
+### 0.4.0
 -----
 - Most commands are now implemented
 - MMD commands are converted
 
-0.3.3
+### 0.3.3
 -----
 - Playing sequences and sections can now be edited
 - Block properties can now be changed
