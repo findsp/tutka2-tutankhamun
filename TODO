@@ -1,6 +1,23 @@
 TODO
 ----
 
+Tutka 2: Tutankhamun Edition
+
+2.0.0 – Alpha 0.1
+-----
+Adding
+
+- Fully functional tracker engine modernized for Qt5/6
+- Drawable MIDI/automation lanes added (click/drag points, curves)
+- GTK/Qt compatible color theming and dynamic palette switching
+- Streamlined UI layout: transport, track panels, inspector optimized
+- Modular project structure for easier expansion (core, plugins scaffolding, user manual)
+- /user-manual auto-loads on first run; root README.md added for GitHub display
+- Build system updated: clean compile, zero deprecated warnings, multi-core support
+- Plugins folder for future expansion (currently scaffolding, no audio integration)
+- Status: fully functional tracker with enhanced UI, production-ready for current feature set
+
+
 1.1.x
 -----
 - Swap instruments with each other
