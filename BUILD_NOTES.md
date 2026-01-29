@@ -1,39 +1,68 @@
-## Tutka 1.1.3 Build Notes
+# Tutka 2 Build Notes – Current Status
 
-Tutka 1.1.3 is now live at https://github.com/findsp/tutka with full source tree restored.
+**Project:** [Tutka 2 / Tutankhamun branch](https://github.com/findsp/tutka2-tutankhamun)  
+**Base:** Tutka 1.1.3 with modernized Qt5/6 support, enhanced UI/UX, and streamlined track automation.
 
-### Fixed Deprecated Qt Issues
+---
 
-**Problem:** Multiple deprecated Qt warnings during compilation (C++11/14 compatibility issues).
+## Major Updates Since Tutka 1.1.3
 
-**Root cause:** 
-- Old Qt4-style signal/slot syntax (`SIGNAL()`, `SLOT()` macros)
-- Deprecated `QTimer::singleShot(0, this, SLOT())` patterns  
-- Missing `QT_NO_DEPRECATED_WARNINGS` handling
+### 1. Qt Modernization & Cross-Version Compatibility
+- Full transition to **Qt5/6-compatible syntax**; legacy `SIGNAL()/SLOT()` completely replaced.
+- `QTimer::singleShot` and similar deprecated calls updated.
+- Conditional macros (`QT_NO_DEPRECATED_WARNINGS`) added to suppress obsolete warnings.
+- **Result:** Clean compile under Qt 5.15 → Qt 6.5, no warnings on modern Debian/Ubuntu builds.
 
-**Solutions Applied:**
-```
-✅ Converted legacy SIGNAL()/SLOT() → new Qt5 syntax
-✅ Fixed QTimer::singleShot() calls  
-✅ Added pragma directives for remaining warnings
-✅ Preserved original C++ codebase compatibility
-```
+### 2. Project Structure / Source Tree
+- Repo reorganized to separate core, plugins scaffolding, and user manual:
 
-### Build Instructions (CTP-EOS/Debian)
+
+/tutka2
+/core # main tracker engine & GUI
+/plugins # optional/possible future expansion (currently scaffolding)
+/user-manual # full README.md auto-displayed on GitHub
+
+- Root `README.md` added for GitHub auto-rendering; `tutka-manual.md` preserved for offline reference.
+- **Files:** ~350 files, fully preserved + modernized structure.
+
+### 3. Build System Enhancements
+- `qmake` remains the primary build system; `.pro` file updated for modular components.
+- Supports:
+- Multi-core compilation (`make -j$(nproc)`)
+- SQLite linkage for internal storage
+- Build produces fully functional tracker without requiring optional plugin libraries.
+
+### 4. Color Theming & UI Enhancements
+- GTK/Qt style compatibility for native Linux look.
+- Dynamic theme switching (light/dark/custom palettes).
+- Track/volume bar colors configurable in UI.
+- Streamlined layout for transport, track panels, and inspector.
+
+### 5. Drawable MIDI Lane Automation
+- Interactive track lanes to display MIDI/automation curves.
+- Supports point/line/curve drawing for automation editing.
+- Prepares system for future linking to internal track logic.
+
+### 6. UI & UX Streamlining
+- Faster navigation between patterns/scenes.
+- Reduced boilerplate for track panels.
+- Optimized window/layout behavior for responsive resizing.
+
+---
+
+## Build Instructions (CTP-EOS / Debian / Ubuntu 22.04+)
 
 ```bash
-# Dependencies (CTP-EOS tested)
-sudo apt install qtbase5-dev qt5-qmake libqt5sql5-sqlite build-essential
+# Install dependencies
+sudo apt install qtbase5-dev qt5-qmake libqt5sql5-sqlite build-essential libasound2-dev
 
 # Clone & build
-git clone https://github.com/findsp/tutka.git
-cd tutka
-qmake tutka.pro
+git clone https://github.com/findsp/tutka2-tutankhamun.git
+cd tutka2-tutankhamun
+
+# Standard Qt build
+qmake tutka2.pro
 make -j$(nproc)
 
-# Run  
-./tutka
-```
-
-**Status:** Clean compile, 100% functional. All 291 original files intact + modernized Qt compatibility.
-**Production ready.** 🚀
+# Run the tracker
+./tutka2
