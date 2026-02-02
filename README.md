@@ -10,11 +10,14 @@ It extends the classic [Tutka](https://github.com/findsp/tutka) workflow with ne
 
 ## 🎹 Vision & Goals
 
+- Adding Dark Themes UI
 - Free **MIDI tracker/sequencer** for Linux  
 - Modern Qt5 GUI with enhanced workflow features  
 - Tutankhamun-themed UI and CTP ecosystem integration  
 - Fully compatible with classic Tutka songs (`.tutka`) and other MIDI formats  
-- Future-ready for Debian 13+ and other GNU/Linux distributions
+- Future-ready for Debian 13+/Arch/and other GNU/Linux distributions
+
+![Tutka Screenshot](https://raw.githubusercontent.com/findsp/tutka2-tutankhamun/refs/heads/main/images/concepts/tutka2_screenshot.png)
 
 ---
 
