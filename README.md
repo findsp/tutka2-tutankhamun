@@ -33,4 +33,4 @@ It extends the classic [Tutka](https://github.com/findsp/tutka) workflow with ne
 
 - Part of the CTP ecosystem  
 - Tutankhamun-themed artwork, UI, and concept assets will accompany the project  
-- Standalone next-generation tracker — expand from Tutka original source code with new enhancments. 
+- Standalone next-generation tracker — new features added to expand from Tutka original source code with new enhancments. 
